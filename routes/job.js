@@ -3,6 +3,7 @@ const router = express.Router();
 const Job = require("../schemas/job.schema");
 const User = require("../schemas/user.schema");
 const jwt = require("jsonwebtoken");
+const {isLoggedIn} = require('../middlewares/auth')
 
 router.post("/create", async (req, res) => {
   try {
